@@ -1,11 +1,4 @@
 # CPU_DATA column dictionary
-
-What each abbreviated column in the `CPU_*.csv` files means. Source of truth:
-the OCCT sensor names (`sensors.json`) mapped through the logger's abbreviation
-map (`occt_bin_tail.py`). Each entry shows: **column** = meaning *(OCCT full name, unit)*.
-
-`wall_time_utc` — sample timestamp, ISO-8601 UTC (0.5 s averaging window).
-
 ---
 
 ## Per-core columns `C{n}_…` (n = core index 0–7)
@@ -29,10 +22,6 @@ Each core exposes two SMT threads, T0 and T1.
 | `C{n}_T1_U` | Core n thread 1 usage *(Core n T1 Usage, %)* |
 | `C{n}_T0_Util` | Core n thread 0 utility *(Core n T0 Utility, %)* |
 | `C{n}_T1_Util` | Core n thread 1 utility *(Core n T1 Utility, %)* |
-
-(Effective clock = average actual clock incl. idle gating; raw clock = the
-instantaneous P-state clock. Usage = scheduler busy %, Utility = work-normalized
-load %.)
 
 ---
 
